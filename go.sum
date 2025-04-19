@@ -1,0 +1,4 @@
+github.com/go-essentials/assert v0.0.0-20250418204546-9bb8360ba37c h1:e2Vzlt08xIx5R25YVvVtnNJ4KPiS0kVhfyYEkZVM1GI=
+github.com/go-essentials/assert v0.0.0-20250418204546-9bb8360ba37c/go.mod h1:szgQ5846TX5wCMDMYOZZy29u1vSOZVvBXXYepqkcR7E=
+github.com/go-essentials/tstsrv v0.0.0-20250418204800-0875161d1beb h1:W/aZbPhru6aZXBAutfF876o2n/tD44NWP9DnbvGNZdA=
+github.com/go-essentials/tstsrv v0.0.0-20250418204800-0875161d1beb/go.mod h1:l0Oc2yck4S842ueKVOQVfnni3tWbYnc4zld1Ayl2gp4=

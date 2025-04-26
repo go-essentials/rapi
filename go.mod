@@ -1,6 +1,6 @@
 module github.com/go-essentials/rapi
 
-go 1.23.8
+go 1.24.2
 
 require (
 	github.com/go-essentials/assert v0.0.0-20250418204546-9bb8360ba37c

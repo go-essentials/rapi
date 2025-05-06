@@ -81,7 +81,7 @@ func (req *POSTRequestMsg) POST(client *http.Client, result any) error {
 	}
 
 	if response.StatusCode != req.OkStatusCode {
-		return errors.New("status code not OK")
+		return fmt.Errorf("status code %d", response.StatusCode)
 	}
 
 	responseData, err := io.ReadAll(response.Body)
@@ -123,7 +123,7 @@ func (req *GETRequestMsg) GET(client *http.Client, result any) error {
 	}
 
 	if response.StatusCode != req.OkStatusCode {
-		return errors.New("status code not OK")
+		return fmt.Errorf("status code %d", response.StatusCode)
 	}
 
 	responseData, err := io.ReadAll(response.Body)
@@ -165,7 +165,7 @@ func (req *GETRequestMsg) GETPlain(client *http.Client, result *string) error {
 	}
 
 	if response.StatusCode != req.OkStatusCode {
-		return errors.New("status code not OK")
+		return fmt.Errorf("status code %d", response.StatusCode)
 	}
 
 	responseData, err := io.ReadAll(response.Body)

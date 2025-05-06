@@ -176,6 +176,11 @@ func TestPOST(t *testing.T) {
 			"UT Name:  An 'error' is returned when the response is different from the 'OK' status code.\n"+
 			"\033[32mExpected: NOT <nil>\033[0m\n"+
 			"\033[31mActual:   %v\033[0m\n\n", err)
+
+		assert.Equal(t, err.Error(), "status code 400", "", "\n\n"+
+			"UT Name:  An 'error' is returned when the response is different from the 'OK' status code.\n"+
+			"\033[32mExpected: status code 400\033[0m\n"+
+			"\033[31mActual:   %v\033[0m\n\n", err.Error())
 	})
 
 	t.Run("When the HTTP response of can't be read.", func(t *testing.T) {
@@ -440,6 +445,11 @@ func TestGET(t *testing.T) {
 			"UT Name:  An 'error' is returned when the response is different from the 'OK' status code.\n"+
 			"\033[32mExpected: NOT <nil>\033[0m\n"+
 			"\033[31mActual:   %v\033[0m\n\n", err)
+
+		assert.Equal(t, err.Error(), "status code 400", "", "\n\n"+
+			"UT Name:  An 'error' is returned when the response is different from the 'OK' status code.\n"+
+			"\033[32mExpected: status code 400\033[0m\n"+
+			"\033[31mActual:   %v\033[0m\n\n", err.Error())
 	})
 
 	t.Run("When the HTTP response of can't be read.", func(t *testing.T) {
@@ -701,6 +711,11 @@ func TestGETPlain(t *testing.T) {
 			"UT Name:  An 'error' is returned when the response is different from the 'OK' status code.\n"+
 			"\033[32mExpected: NOT <nil>\033[0m\n"+
 			"\033[31mActual:   %v\033[0m\n\n", err)
+
+		assert.Equal(t, err.Error(), "status code 400", "", "\n\n"+
+			"UT Name:  An 'error' is returned when the response is different from the 'OK' status code.\n"+
+			"\033[32mExpected: status code 400\033[0m\n"+
+			"\033[31mActual:   %v\033[0m\n\n", err.Error())
 	})
 
 	t.Run("When the HTTP response of can't be read.", func(t *testing.T) {

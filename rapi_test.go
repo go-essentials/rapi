@@ -59,7 +59,7 @@ func TestPOST(t *testing.T) {
 		err := request.POST(http.DefaultClient, &got)
 
 		// ASSERT.
-		assert.NotNil(t, err, "", "\n\n"+
+		assert.NotNilf(t, err, "\n\n"+
 			"UT Name:  An 'error' is returned when the endpoint isn't available.\n"+
 			"\033[32mExpected: NOT <nil>\033[0m\n"+
 			"\033[31mActual:   %v\033[0m\n\n", err)
@@ -100,12 +100,12 @@ func TestPOST(t *testing.T) {
 		err := request.POST(http.DefaultClient, &got)
 
 		// ASSERT.
-		assert.NotNil(t, err, "", "\n\n"+
+		assert.NotNilf(t, err, "\n\n"+
 			"UT Name:  The custom handler is for the received status code is invoked.\n"+
 			"\033[32mExpected: NOT <nil>\033[0m\n"+
 			"\033[31mActual:   %v\033[0m\n\n", err)
 
-		assert.Equal(t, err.Error(), "error raised from the custom handler", "", "\n\n"+
+		assert.Equalf(t, err.Error(), "error raised from the custom handler", "\n\n"+
 			"UT Name:  The custom handler is for the received status code is invoked.\n"+
 			"\033[32mExpected: error raised from the custom handler\033[0m\n"+
 			"\033[31mActual:   %s\033[0m\n\n", err.Error())
@@ -135,7 +135,7 @@ func TestPOST(t *testing.T) {
 		err := request.POST(http.DefaultClient, &got)
 
 		// ASSERT.
-		assert.NotNil(t, err, "", "\n\n"+
+		assert.NotNilf(t, err, "\n\n"+
 			"UT Name:  An 'error' is returned when the endpoint isn't available.\n"+
 			"\033[32mExpected: NOT <nil>\033[0m\n"+
 			"\033[31mActual:   %v\033[0m\n\n", err)
@@ -172,12 +172,12 @@ func TestPOST(t *testing.T) {
 		err := request.POST(http.DefaultClient, &got)
 
 		// ASSERT.
-		assert.NotNil(t, err, "", "\n\n"+
+		assert.NotNilf(t, err, "\n\n"+
 			"UT Name:  An 'error' is returned when the response is different from the 'OK' status code.\n"+
 			"\033[32mExpected: NOT <nil>\033[0m\n"+
 			"\033[31mActual:   %v\033[0m\n\n", err)
 
-		assert.Equal(t, err.Error(), "status code 400", "", "\n\n"+
+		assert.Equalf(t, err.Error(), "status code 400", "\n\n"+
 			"UT Name:  An 'error' is returned when the response is different from the 'OK' status code.\n"+
 			"\033[32mExpected: status code 400\033[0m\n"+
 			"\033[31mActual:   %v\033[0m\n\n", err.Error())
@@ -214,7 +214,7 @@ func TestPOST(t *testing.T) {
 		err := request.POST(http.DefaultClient, &got)
 
 		// ASSERT.
-		assert.NotNil(t, err, "", "\n\n"+
+		assert.NotNilf(t, err, "\n\n"+
 			"UT Name:  An 'error' is returned when the HTTP response can't be read.\n"+
 			"\033[32mExpected: NOT <nil>\033[0m\n"+
 			"\033[31mActual:   %v\033[0m\n\n", err)
@@ -251,7 +251,7 @@ func TestPOST(t *testing.T) {
 		err := request.POST(http.DefaultClient, &got)
 
 		// ASSERT.
-		assert.NotNil(t, err, "", "\n\n"+
+		assert.NotNilf(t, err, "\n\n"+
 			"UT Name:  An 'error' is returned when the HTTP response doesn't contain valid JSON.\n"+
 			"\033[32mExpected: NOT <nil>\033[0m\n"+
 			"\033[31mActual:   %v\033[0m\n\n", err)
@@ -293,12 +293,12 @@ func TestPOST(t *testing.T) {
 		err := request.POST(http.DefaultClient, &got)
 
 		// ASSERT.
-		assert.Nil(t, err, "", "\n\n"+
+		assert.Nilf(t, err, "\n\n"+
 			"UT Name:  NO 'error' is returned when the HTTP response contains valid JSON.\n"+
 			"\033[32mExpected: <nil>\033[0m\n"+
 			"\033[31mActual:   %v\033[0m\n\n", err)
 
-		assert.Equal(t, got, want, "", "\n\n"+
+		assert.Equalf(t, got, want, "\n\n"+
 			"UT Name:  The deserialized HTTP response is returned.\n"+
 			"\033[32mExpected: %v\033[0m\n"+
 			"\033[31mActual:   %v\033[0m\n\n", got, want)
@@ -328,7 +328,7 @@ func TestGET(t *testing.T) {
 		err := request.GET(http.DefaultClient, &got)
 
 		// ASSERT.
-		assert.NotNil(t, err, "", "\n\n"+
+		assert.NotNilf(t, err, "\n\n"+
 			"UT Name:  An 'error' is returned when the endpoint isn't available.\n"+
 			"\033[32mExpected: NOT <nil>\033[0m\n"+
 			"\033[31mActual:   %v\033[0m\n\n", err)
@@ -369,12 +369,12 @@ func TestGET(t *testing.T) {
 		err := request.GET(http.DefaultClient, &got)
 
 		// ASSERT.
-		assert.NotNil(t, err, "", "\n\n"+
+		assert.NotNilf(t, err, "\n\n"+
 			"UT Name:  The custom handler is for the received status code is invoked.\n"+
 			"\033[32mExpected: NOT <nil>\033[0m\n"+
 			"\033[31mActual:   %v\033[0m\n\n", err)
 
-		assert.Equal(t, err.Error(), "error raised from the custom handler", "", "\n\n"+
+		assert.Equalf(t, err.Error(), "error raised from the custom handler", "\n\n"+
 			"UT Name:  The custom handler is for the received status code is invoked.\n"+
 			"\033[32mExpected: error raised from the custom handler\033[0m\n"+
 			"\033[31mActual:   %s\033[0m\n\n", err.Error())
@@ -404,7 +404,7 @@ func TestGET(t *testing.T) {
 		err := request.GET(http.DefaultClient, &got)
 
 		// ASSERT.
-		assert.NotNil(t, err, "", "\n\n"+
+		assert.NotNilf(t, err, "\n\n"+
 			"UT Name:  An 'error' is returned when the endpoint isn't available.\n"+
 			"\033[32mExpected: NOT <nil>\033[0m\n"+
 			"\033[31mActual:   %v\033[0m\n\n", err)
@@ -441,12 +441,12 @@ func TestGET(t *testing.T) {
 		err := request.GET(http.DefaultClient, &got)
 
 		// ASSERT.
-		assert.NotNil(t, err, "", "\n\n"+
+		assert.NotNilf(t, err, "\n\n"+
 			"UT Name:  An 'error' is returned when the response is different from the 'OK' status code.\n"+
 			"\033[32mExpected: NOT <nil>\033[0m\n"+
 			"\033[31mActual:   %v\033[0m\n\n", err)
 
-		assert.Equal(t, err.Error(), "status code 400", "", "\n\n"+
+		assert.Equalf(t, err.Error(), "status code 400", "\n\n"+
 			"UT Name:  An 'error' is returned when the response is different from the 'OK' status code.\n"+
 			"\033[32mExpected: status code 400\033[0m\n"+
 			"\033[31mActual:   %v\033[0m\n\n", err.Error())
@@ -483,7 +483,7 @@ func TestGET(t *testing.T) {
 		err := request.GET(http.DefaultClient, &got)
 
 		// ASSERT.
-		assert.NotNil(t, err, "", "\n\n"+
+		assert.NotNilf(t, err, "\n\n"+
 			"UT Name:  An 'error' is returned when the HTTP response can't be read.\n"+
 			"\033[32mExpected: NOT <nil>\033[0m\n"+
 			"\033[31mActual:   %v\033[0m\n\n", err)
@@ -520,7 +520,7 @@ func TestGET(t *testing.T) {
 		err := request.GET(http.DefaultClient, &got)
 
 		// ASSERT.
-		assert.NotNil(t, err, "", "\n\n"+
+		assert.NotNilf(t, err, "\n\n"+
 			"UT Name:  An 'error' is returned when the HTTP response doesn't contain valid JSON.\n"+
 			"\033[32mExpected: NOT <nil>\033[0m\n"+
 			"\033[31mActual:   %v\033[0m\n\n", err)
@@ -562,12 +562,12 @@ func TestGET(t *testing.T) {
 		err := request.GET(http.DefaultClient, &got)
 
 		// ASSERT.
-		assert.Nil(t, err, "", "\n\n"+
+		assert.Nilf(t, err, "\n\n"+
 			"UT Name:  NO 'error' is returned when the HTTP response contains valid JSON.\n"+
 			"\033[32mExpected: <nil>\033[0m\n"+
 			"\033[31mActual:   %v\033[0m\n\n", err)
 
-		assert.Equal(t, got, want, "", "\n\n"+
+		assert.Equalf(t, got, want, "\n\n"+
 			"UT Name:  The deserialized HTTP response is returned.\n"+
 			"\033[32mExpected: %v\033[0m\n"+
 			"\033[31mActual:   %v\033[0m\n\n", got, want)
@@ -594,7 +594,7 @@ func TestGETPlain(t *testing.T) {
 		err := request.GETPlain(http.DefaultClient, &got)
 
 		// ASSERT.
-		assert.NotNil(t, err, "", "\n\n"+
+		assert.NotNilf(t, err, "\n\n"+
 			"UT Name:  An 'error' is returned when the endpoint isn't available.\n"+
 			"\033[32mExpected: NOT <nil>\033[0m\n"+
 			"\033[31mActual:   %v\033[0m\n\n", err)
@@ -635,12 +635,12 @@ func TestGETPlain(t *testing.T) {
 		err := request.GETPlain(http.DefaultClient, &got)
 
 		// ASSERT.
-		assert.NotNil(t, err, "", "\n\n"+
+		assert.NotNilf(t, err, "\n\n"+
 			"UT Name:  The custom handler is for the received status code is invoked.\n"+
 			"\033[32mExpected: NOT <nil>\033[0m\n"+
 			"\033[31mActual:   %v\033[0m\n\n", err)
 
-		assert.Equal(t, err.Error(), "error raised from the custom handler", "", "\n\n"+
+		assert.Equalf(t, err.Error(), "error raised from the custom handler", "\n\n"+
 			"UT Name:  The custom handler is for the received status code is invoked.\n"+
 			"\033[32mExpected: error raised from the custom handler\033[0m\n"+
 			"\033[31mActual:   %s\033[0m\n\n", err.Error())
@@ -670,7 +670,7 @@ func TestGETPlain(t *testing.T) {
 		err := request.GETPlain(http.DefaultClient, &got)
 
 		// ASSERT.
-		assert.NotNil(t, err, "", "\n\n"+
+		assert.NotNilf(t, err, "\n\n"+
 			"UT Name:  An 'error' is returned when the endpoint isn't available.\n"+
 			"\033[32mExpected: NOT <nil>\033[0m\n"+
 			"\033[31mActual:   %v\033[0m\n\n", err)
@@ -707,12 +707,12 @@ func TestGETPlain(t *testing.T) {
 		err := request.GETPlain(http.DefaultClient, &got)
 
 		// ASSERT.
-		assert.NotNil(t, err, "", "\n\n"+
+		assert.NotNilf(t, err, "\n\n"+
 			"UT Name:  An 'error' is returned when the response is different from the 'OK' status code.\n"+
 			"\033[32mExpected: NOT <nil>\033[0m\n"+
 			"\033[31mActual:   %v\033[0m\n\n", err)
 
-		assert.Equal(t, err.Error(), "status code 400", "", "\n\n"+
+		assert.Equalf(t, err.Error(), "status code 400", "\n\n"+
 			"UT Name:  An 'error' is returned when the response is different from the 'OK' status code.\n"+
 			"\033[32mExpected: status code 400\033[0m\n"+
 			"\033[31mActual:   %v\033[0m\n\n", err.Error())
@@ -749,7 +749,7 @@ func TestGETPlain(t *testing.T) {
 		err := request.GETPlain(http.DefaultClient, &got)
 
 		// ASSERT.
-		assert.NotNil(t, err, "", "\n\n"+
+		assert.NotNilf(t, err, "\n\n"+
 			"UT Name:  An 'error' is returned when the HTTP response can't be read.\n"+
 			"\033[32mExpected: NOT <nil>\033[0m\n"+
 			"\033[31mActual:   %v\033[0m\n\n", err)
@@ -786,12 +786,12 @@ func TestGETPlain(t *testing.T) {
 		err := request.GETPlain(http.DefaultClient, &got)
 
 		// ASSERT.
-		assert.Nil(t, err, "", "\n\n"+
+		assert.Nilf(t, err, "\n\n"+
 			"UT Name:  NO 'error' is returned when the HTTP response contains valid JSON.\n"+
 			"\033[32mExpected: <nil>\033[0m\n"+
 			"\033[31mActual:   %v\033[0m\n\n", err)
 
-		assert.Equal(t, got, "HELLO, WORLD!", "", "\n\n"+
+		assert.Equalf(t, got, "HELLO, WORLD!", "\n\n"+
 			"UT Name:  The deserialized HTTP response is returned.\n"+
 			"\033[32mExpected: HELLO, WORLD!\033[0m\n"+
 			"\033[31mActual:   %s\033[0m\n\n", got)
